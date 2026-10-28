@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tobacconist</title>
+<!--META-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="banner" id="banner" hidden></div>
+<div class="wrap">
+  <header>
+    <a class="logo" href="index.html"><img id="logoImg" alt="" hidden><span data-shop="name"></span></a>
+    <nav>
+      <a href="index.html" data-i18n="nav_home"></a>
+      <a href="products.html" data-i18n="nav_products"></a>
+      <a href="gallery.html" data-i18n="nav_gallery"></a>
+      <a href="reserve.html" data-i18n="nav_reserve"></a>
+      <a href="index.html#about" data-i18n="nav_about"></a>
+      <a href="index.html#visit" data-i18n="nav_visit"></a>
+      <button class="lang" id="lang" type="button"></button>
+    </nav>
+  </header>
+
+  <div class="hero" id="hero">
+    <h1 class="pre" data-shop="tagline"></h1>
+    <p class="pre" data-shop="intro"></p>
+    <a class="btn" href="products.html" data-i18n="browse"></a>
+    <div><span class="age" data-i18n="age"></span></div>
+    <div><span class="open-badge" hidden></span></div>
+  </div>
+
+  <section id="featured" hidden>
+    <h2 data-i18n="featured"></h2>
+    <div class="grid" id="feat"></div>
+  </section>
+
+  <section id="products">
+    <h2 data-i18n="carry"></h2>
+    <div class="grid" id="cats"></div>
+  </section>
+
+  <section id="about">
+    <h2 data-i18n="about_h"></h2>
+    <p class="pre" style="max-width:640px;color:var(--muted)" data-shop="about"></p>
+  </section>
+
+  <section id="visit">
+    <h2 data-i18n="visit_h"></h2>
+    <div class="two">
+      <div>
+        <h3 style="margin-bottom:10px" data-i18n="hours"></h3>
+        <table id="hours"></table>
+        <p id="closures" class="muted" style="margin:8px 0 0;font-size:.9rem" hidden></p>
+        <span class="open-badge" hidden></span>
+      </div>
+      <div>
+        <h3 style="margin-bottom:10px" data-i18n="find"></h3>
+        <p class="pre" style="margin:0;color:var(--muted)" data-shop="address"></p>
+        <p style="color:var(--muted)"><span data-i18n="phone"></span>: <span data-shop="phone"></span><br><span data-i18n="email"></span>: <span data-shop="email"></span></p>
+      </div>
+    </div>
+    <div class="map"><iframe id="map" title="Map" loading="lazy"></iframe></div>
+    <a class="btn" id="dir" href="#" target="_blank" rel="noopener" data-i18n="directions"></a>
+  </section>
+
+  <section id="reviews">
+    <h2 data-i18n="reviews_h"></h2>
+    <div class="list" id="rvlist"></div>
+    <h3 data-i18n="rv_form" style="margin:26px 0 10px"></h3>
+    <div class="form" style="max-width:560px">
+      <input id="rvName" maxlength="60" data-ph="rv_name">
+      <select id="rvRating"><option value="5">★★★★★</option><option value="4">★★★★☆</option><option value="3">★★★☆☆</option><option value="2">★★☆☆☆</option><option value="1">★☆☆☆☆</option></select>
+      <textarea id="rvText" maxlength="600" data-ph="rv_text"></textarea>
+      <input class="hp" id="rvHp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <div><button class="btn" id="rvSend" type="button" data-i18n="rv_send"></button></div>
+      <p id="rvMsg" class="muted"></p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="social" id="social"></div>
+    <p data-i18n="footer_warn"></p>
+    <p>© <span id="yr"></span> <span data-shop="name"></span></p>
+  </footer>
+</div>
+<script src="i18n.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tobacconist</title>
+<!--META-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-title="nav_reserve">
+<div class="banner" id="banner" hidden></div>
+<div class="wrap">
+  <header>
+    <a class="logo" href="index.html"><img id="logoImg" alt="" hidden><span data-shop="name"></span></a>
+    <nav>
+      <a href="index.html" data-i18n="nav_home"></a>
+      <a href="products.html" data-i18n="nav_products"></a>
+      <a href="gallery.html" data-i18n="nav_gallery"></a>
+      <a href="reserve.html" data-i18n="nav_reserve"></a>
+      <a href="index.html#about" data-i18n="nav_about"></a>
+      <a href="index.html#visit" data-i18n="nav_visit"></a>
+      <button class="lang" id="lang" type="button"></button>
+    </nav>
+  </header>
+
+  <div class="page-title">
+    <h1 data-i18n="reserve_h"></h1>
+    <p data-i18n="reserve_sub"></p>
+  </div>
+  <div class="form" style="max-width:560px;margin:0 auto 40px">
+    <input id="rName" maxlength="100" data-ph="f_name" autocomplete="name">
+    <input id="rPhone" type="tel" maxlength="40" data-ph="f_phone" autocomplete="tel">
+    <textarea id="rItems" maxlength="1000" data-ph="f_items"></textarea>
+    <input class="hp" id="rHp" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <div><button class="btn" id="rSend" type="button" data-i18n="send"></button></div>
+    <p id="rMsg" class="muted"></p>
+    <p class="muted" style="font-size:.85rem" data-i18n="reserve_note"></p>
+  </div>
+
+  <footer>
+    <div class="social" id="social"></div>
+    <p data-i18n="footer_warn"></p>
+    <p>© <span id="yr"></span> <span data-shop="name"></span></p>
+  </footer>
+</div>
+<script src="i18n.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

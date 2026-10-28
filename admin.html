@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Admin</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="admin">
+<div class="wrap">
+  <header>
+    <a class="logo" href="index.html">← View site</a>
+    <button class="sm" id="logout" hidden>Log out</button>
+  </header>
+  <div id="login" hidden>
+    <h1>Admin login</h1>
+    <p><input type="password" id="pw" placeholder="Password" autocomplete="current-password"> <button class="btn" id="go">Log in</button></p>
+    <p class="err" id="err"></p>
+  </div>
+  <div id="editor" hidden></div>
+</div>
+<div id="bar" hidden><span id="msg"></span><button class="btn" id="save">Save changes</button></div>
+<script src="admin.js"></script>
+</body>
+</html>
